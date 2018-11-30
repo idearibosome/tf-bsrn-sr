@@ -18,9 +18,9 @@ This repository contains the official TensorFlow-based implementation of the BSR
 - Python 3.6+
 - TensorFlow 1.8+
 
-## Testing the pretrained model
+## Testing the pre-trained model
 
-We provide the pretrained multi-scale BSRN model in the ```checkpoints``` directory.
+We provide the pre-trained multi-scale BSRN model in the ```checkpoints``` directory.
 To test with it, use the following code:
 ```shell
 python test_bsrn.py
