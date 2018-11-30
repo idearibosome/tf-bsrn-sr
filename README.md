@@ -1,5 +1,7 @@
 # Lightweight and Efficient Image Super-Resolution with Block State-based Recursive Network (BSRN)
 
+![Urban100 - 067](figures/urban100_067_x2.png)
+
 This repository contains the official TensorFlow-based implementation of the BSRN model, which is explained in the following paper.
 - J.-H. Choi, J.-H. Kim, M. Cheon, J.-S. Lee: Lightweight and efficient image super-resolution with block state-based recursive network. arXiv:18xx.xxxxx (2018) [arXiv]
 ```
