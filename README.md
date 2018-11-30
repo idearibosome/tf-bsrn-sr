@@ -20,7 +20,7 @@ This repository contains the official TensorFlow-based implementation of the BSR
 
 The training code is in the ```train/``` folder.
 
-The original BSRN model is trained with training images of the DIV2K dataset.
+The original BSRN model is trained with the DIV2K dataset.
 You can download the images from its [official website](https://data.vision.ee.ethz.ch/cvl/DIV2K/).
 After downloading and extracting the images, the directory structure may be looked like this:
 ```
