@@ -15,8 +15,8 @@ DEFAULT_DATALOADER = 'basic_loader'
 DEFAULT_MODEL = 'base_model'
 
 if __name__ == '__main__':
-  tf.flags.DEFINE_integer('batch_size', 16, 'Size of the batches for each training step.')
-  tf.flags.DEFINE_integer('input_patch_size', 48, 'Size of each input image patch.')
+  tf.flags.DEFINE_integer('batch_size', 8, 'Size of the batches for each training step.')
+  tf.flags.DEFINE_integer('input_patch_size', 32, 'Size of each input image patch.')
   tf.flags.DEFINE_integer('target_patch_size', -1, 'Size of each target image patch. Specify this instead of input_patch_size when the output size should be the same across different scales. Specify it as -1 to use input_patch_size instead.')
 
   tf.flags.DEFINE_string('dataloader', DEFAULT_DATALOADER, 'Name of the data loader.')
