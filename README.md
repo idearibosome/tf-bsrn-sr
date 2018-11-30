@@ -30,6 +30,8 @@ python test_bsrn.py
   --input_path=<path of input images>
   --scale=<scaling factor [2|3|4]>
 ```
+The super-resolved images will be saved at ```SR/``` folder.
+You can change the destination folder with ```--output_path=<path of output images>```.
 
 We also provide the result images obtained on four benchmark datasets (i.e., Set5, Set14, BSD100, and Urban100). [[Download]](http://mcml.yonsei.ac.kr/files/bsrn/bsrn_results.zip)
 
