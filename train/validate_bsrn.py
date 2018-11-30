@@ -139,7 +139,7 @@ def main(unused_argv):
 
         if (not FLAGS.ensemble_only):
           if (FLAGS.save_path is not None):
-            output_image_path = os.path.join(FLAGS.save_path, 't%d' % (num_recursions), 'x%d' % (scale), image_name)
+            output_image_path = os.path.join(FLAGS.save_path, 't%d' % (num_recursions), 'x%d' % (scale), os.path.splitext(image_name)[0]+'.png')
             tf_image_session.run(tf_image_save_op, feed_dict={tf_image_save_path:output_image_path, tf_image_save_image:output_image})
 
           truth_image = _clip_image(truth_image)
@@ -161,7 +161,7 @@ def main(unused_argv):
       output_image = output_image_ensemble / ensemble_factor_total
 
       if (FLAGS.save_path is not None):
-        output_image_path = os.path.join(FLAGS.save_path, 'ensemble', 'x%d' % (scale), image_name)
+        output_image_path = os.path.join(FLAGS.save_path, 'ensemble', 'x%d' % (scale), os.path.splitext(image_name)[0]+'.png')
         tf_image_session.run(tf_image_save_op, feed_dict={tf_image_save_path:output_image_path, tf_image_save_image:output_image})
 
       truth_image = _clip_image(truth_image)
