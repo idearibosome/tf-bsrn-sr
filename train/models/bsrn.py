@@ -366,7 +366,7 @@ class BSRN(BaseModel):
       current_loss_weight = 2.0 ** (num_modules-1)
       loss_l1 = tf.reduce_mean(tf.losses.absolute_difference(each_output_list, truth_list))
       self.loss_dict['recon_l1_m%d' % (num_modules)] = loss_l1
-      loss += loss_l1 * FLAGS.bsrn_loss_recon_weight * current_loss_weight
+      loss += loss_l1 * current_loss_weight
       total_loss_weights += current_loss_weight
 
     if (total_loss_weights > 0):
