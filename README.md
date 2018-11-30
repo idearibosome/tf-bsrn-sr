@@ -18,6 +18,21 @@ This repository contains the official TensorFlow-based implementation of the BSR
 - Python 3.6+
 - TensorFlow 1.8+
 
+## Testing the pretrained model
+
+We provide the pretrained multi-scale BSRN model in the ```checkpoints``` directory.
+To test with it, use the following code:
+```shell
+python test_bsrn.py
+  --model=bsrn
+  --bsrn_model_scales=2,3,4
+  --restore_path=checkpoints/bsrn_c64_s64_x234.ckpt
+  --input_path=<path of input images>
+  --scale=<scaling factor [2|3|4]>
+```
+
+We also provide the result images obtained on four benchmark datasets (i.e., Set5, Set14, BSD100, and Urban100). [[Download]](http://mcml.yonsei.ac.kr/files/bsrn/bsrn_results.zip)
+
 ## Training
 
 The original BSRN model is trained with the DIV2K dataset.
@@ -45,7 +60,7 @@ After downloading and extracting the images, the directory structure may be look
 ```
 
 Now you can train the model with the following command:
-```
+```shell
 python train.py
   --dataloader=div2k_loader
   --data_input_path=/tmp/dataset/DIV2K/DIV2K_train_LR_bicubic
@@ -67,7 +82,7 @@ tensorboard --logdir=/tmp/bsrn
 
 You can also validate the trained model by ```validate_bsrn.py```.
 For example, if you want to evaluate the model saved at step 50000 with the BSD100 dataset, run
-```
+```shell
 python validate_bsrn.py
   --dataloader=basic_loader
   --data_input_path=/tmp/dataset/BSD100/LR
